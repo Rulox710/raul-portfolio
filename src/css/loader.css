@@ -1,0 +1,72 @@
+@keyframes wave {
+  0%, 40%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: .7;
+  }
+  20% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+#loader {
+  min-height: 90dvh;
+  font-family: "Pangolin", cursive;
+  font-size: 3rem;
+  color: var(--color-txt-tertiary);
+  opacity: 1;
+  transition: opacity 0.6s ease;
+
+  &.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  div {
+    font-weight: bolder;
+    animation: wave 1.2s ease-in-out infinite;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+  }
+}
+
+#portfolio {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+
+  &.fade-in {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

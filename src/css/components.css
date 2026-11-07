@@ -1,0 +1,112 @@
+/* Selectores para elementos más genéricos */
+
+/* Bot''on con estilo florence */
+.btn-florence {
+  flex-shrink: 0;
+  /* Tamaño configurable */
+  min-width: calc(3/4*var(--button-size));
+  width: max-content;
+  max-width: max-content;
+  height: calc(3/4*var(--button-size));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-txt-secondary);
+  border: 5px solid var(--color-accent);
+  border-bottom-width: 10px;
+  transition: border var(--transition-speed) ease-out;
+  padding: 10px;
+  gap: 0.7rem;
+  cursor: pointer;
+  font-size: var(--fs-label);
+
+  /* Pasarle el cursor */
+  &:hover {
+    background-color: var(--color-txt-tertiary);
+    /* border: 2px solid var(--color-accent); */
+    border-width: 8px 5px;
+    transition: border-width var(--transition-speed) ease-in;
+  }
+
+  /* Al hacer clic */
+  &:active {
+    /* transform: translateY(3px); */
+    transform: scale(0.95);
+  }
+
+  /* Para mantener "activo" el botón */
+  &.selected {
+    background-color: var(--color-selection);
+    border: 5px solid var(--color-bg-primary);
+    border-bottom-width: 10px;
+    transition:
+      background-color var(--transition-speed) ease,
+      border-color var(--transition-speed) ease,
+      border-width var(--transition-speed) ease-in;
+
+    img, p {
+      filter: invert(84%) sepia(24%) saturate(3737%) hue-rotate(8deg) brightness(110%) contrast(96%);
+      /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(146deg) brightness(109%) contrast(103%); */
+    }
+
+    /* Pasar el cursos sobre botón "activo" */
+    :hover {
+      border-width: 8px 5px;
+      transition: border-width var(--transition-speed) ease-in;
+    }
+  }
+}
+
+/* Es para los links a enlaces */
+.btn-general {
+  width: calc(1/4*var(--button-size));
+  height: calc(1/4*var(--button-size));
+  background: var(--color-accent);
+  transition: background 1s ease-in-out;
+
+  /* A una página web */
+  &.page {
+    -webkit-mask: url('/images/third-party/world-www.svg') center/contain no-repeat;
+    mask: url('/images/third-party/world-www.svg') center/contain no-repeat;
+
+    &:hover {
+      background: #5625ac;
+      transition-duration: 0s;
+    }
+  }
+
+  /* A página de github */
+  &.github {
+    -webkit-mask: url('/images/third-party/brand-github.svg') center/contain no-repeat;
+    mask: url('/images/third-party/brand-github.svg') center/contain no-repeat;
+
+    &:hover {
+      background: #0969DA;
+      transition-duration: 0s;
+    }
+  }
+
+  /* A página de gitlab */
+  &.gitlab {
+    -webkit-mask: url('/images/third-party/brand-gitlab.svg') center/contain no-repeat;
+    mask: url('/images/third-party/brand-gitlab.svg') center/contain no-repeat;
+
+    &:hover {
+      background: #FC6D26;
+      transition-duration: 0s;
+    }
+  }
+
+  /* A página itchio */
+  &.itchio {
+    -webkit-mask: url('/images/third-party/brand-itch.svg') center/contain no-repeat;
+    mask: url('/images/third-party/brand-itch.svg') center/contain no-repeat;
+
+    &:hover {
+      background: #FA5C5C;
+      transition-duration: 0s;
+    }
+  }
+}

@@ -6,6 +6,7 @@ repos:
   - id: check-yaml
   - id: check-toml
   - id: check-added-large-files
+    exclude: '\.mp4$'
   - id: check-case-conflict
   - id: check-executables-have-shebangs
     files: '\.sh$'

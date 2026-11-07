@@ -33,3 +33,15 @@ El proyecto se estructura de la siguiente manera:
 ## Inspiración
 La paleta de colores y el estilo simple viene por la inspiración en el
 videojuego Florence de Mountains (2018).
+
+
+## Licencias
+Este proyecto utiliza licencias diferentes
+según el tipo de contenido:
+
+- Código fuente: Apache License 2.0.
+- Contenido original y documentación: CC BY-SA 4.0.
+- Recursos de terceros: conservan sus respectivas licencias.
+
+Consulta LICENSE y LICENSE-CONTENT
+para conocer los términos correspondientes.

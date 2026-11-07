@@ -1,0 +1,14 @@
+#stack {
+  /* Alto toda la pantalla, a menos que sea una pantalla muy larga */
+  min-height: var(--about-height);
+  display: flex;
+  padding: 1rem calc(var(--button-size)/2) 0 var(--button-size);
+
+  h2 {
+    font-size: var(--fs-title);
+  }
+
+  @media (max-width: 999px) {
+    padding: 1rem 0;
+  }
+}

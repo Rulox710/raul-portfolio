@@ -1,0 +1,32 @@
+{
+  "name": "portfolio-de-raul",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portafolio web para mostrar mis proyectos a futuros empleadores.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rulox710/raul-portfolio.git"
+  },
+  "author": "Raúl Nuño Valdés",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --load-path=node_modules scss:src/css",
+    "sass:watch": "sass --load-path=node_modules --watch scss:src/css",
+    "dev": "sass --load-path=node_modules scss:src/css && vite",
+    "build": "sass --load-path=node_modules scss:src/css && vite build",
+    "preview": "vite preview",
+    "cf:dev": "pnpm run build && wrangler pages dev dist",
+    "cf:deploy": "pnpm run build && wrangler pages deploy dist --project-name=rauls-portfolio --branch=main",
+    "cf:preview": "pnpm run build && wrangler pages deploy dist --project-name=rauls-portfolio"
+  },
+  "devDependencies": {
+    "sass": "^1.107.1",
+    "vite": "^8.3.5",
+    "wrangler": "^4.156.2"
+  },
+  "dependencies": {
+    "@fontsource/pangolin": "^5.3.0",
+    "bootstrap": "5.3.8"
+  }
+}

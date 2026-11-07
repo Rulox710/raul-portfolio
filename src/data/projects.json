@@ -1,0 +1,83 @@
+[
+  {
+    "id": "apexiron",
+    "title": "ApexIron",
+    "description": "E-commerce colaborativo para la venta de productos a personas con conocimientos básicos en tecnología.",
+    "image": "/projects/p-apexiron-1.webp",
+    "alt": "Página de inicio de ApexIron",
+    "techs": "html css js java sql git",
+    "links": {
+      "page": "https://www.apexiron.carlosestrchz.me/",
+      "github": "https://github.com/JesusPeralta0/Apex-Iron"
+    }
+  },
+  {
+    "id": "cienciastop",
+    "title": "CienciasTop",
+    "description": "Página colaborativa para realizar préstamos de objetos recreativos a miembros universitarios.",
+    "image": "/projects/p-cienciastop-1.webp",
+    "alt": "Página de inicio de CienciasTop",
+    "techs": "html css js java sql git",
+    "links": {
+      "github": "https://github.com/Rulox710/ciencias-top-logic_seven"
+    }
+  },
+  {
+    "id": "ritmo",
+    "title": "Ritmo",
+    "description": "Página colaborativa para la venta de productos de hike, ciclismo, hyrox y running.",
+    "image": "/projects/p-ritmo-1.webp",
+    "alt": "Página principal de Ritmo",
+    "techs": "html css js git",
+    "links": {
+      "page": "https://rulox710.github.io/generation-hackaton-1/",
+      "github": "https://github.com/Rulox710/generation-hackaton-1"
+    }
+  },
+  {
+    "id": "michituber",
+    "title": "MichiTuber",
+    "description": "Programa de bajo consumo de recursos computacionales para crear un modelo vtuber en 2 dimensiones.",
+    "image": "/projects/p-michituber-1.webp",
+    "alt": "Programa de edición de VTubers con MichiTuber",
+    "techs": "java git",
+    "links": {
+      "itchio": "https://userrulox.itch.io/michituber",
+      "github": "https://github.com/Rulox710/michitube"
+    }
+  },
+  {
+    "id": "vrptw",
+    "title": "Solucionador de VRPTW",
+    "description": "Programa capaz de resolver mediante el Problema de Enrutamiento de Vehículos con Ventanas de Tiempo.",
+    "image": "/projects/p-vrptw-1.webp",
+    "alt": "Ejecución del Solucionador de VRPTW",
+    "techs": "python git latex",
+    "links": {
+      "gitlab": "https://gitlab.com/rnunovaldes/vrptw"
+    }
+  },
+  {
+    "id": "anl",
+    "title": "Adaptaciones NL",
+    "description": "Plataforma web para organizar y consultar proyectos de traducción de novelas ligeras.",
+    "image": "/projects/p-anl-1.webp",
+    "alt": "Página de librería principal de Adaptaciones de Novelas Ligeras",
+    "techs": "html js css git",
+    "links": {
+      "page": "https://adaptaciones-ruloxanl.pages.dev/",
+      "gitlab": "https://gitlab.com/ruloxANL/pagina-anl"
+    }
+  },
+  {
+    "id": "zeroranger",
+    "title": "ZeroRanger - Español",
+    "description": "Proyecto de localización donde se modifican y adaptan elementos internos junto a pruebas de integración.",
+    "video": "/projects/p-zeroranger-1.mp4",
+    "alt": "Ejecución de ZeroRanger con Localización",
+    "techs": "gml",
+    "links": {
+      "itchio": "https://userrulox.itch.io/zeroranger-espanyol"
+    }
+  }
+]

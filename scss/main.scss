@@ -1,0 +1,154 @@
+// Relevante de bootstrap
+@import "bootstrap/scss/functions";
+
+// Prsonalización de variables
+$body-bg: #0A0D40;
+$body-secondary-bg: #F2CB05;
+$body-tertiary-bg: #FFFFFF;
+
+$primary: #FFFFFF;
+$secondary: #0A0D40;
+$tertiary: #F2E205;
+
+$accent: #465973;
+$selection: #28a745;
+
+$body-color: $primary;
+$headings-color: $primary;
+
+$font-size-base: 1.5rem; //24px
+$h1-font-size: 2.25rem; // 36px
+$h2-font-size: 2.25rem; // 32px
+$h3-font-size: 2rem; // 32px
+$extra-font-size: 1rem; // 16px
+
+// Configuración
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/images";
+
+// solo las utilidades que uso
+// $utilities: map-get-multiple($utilities, (
+//   "margin", "padding", "display", "flex-direction", "flex-wrap",
+//   "justify-content", "align-items", "align-self", "order", "gap",
+//   "background-color", "color", "text-align", "font-size", "width", "opacity"
+// ));
+// @each $key, $util in $utilities {
+//   @if not index(("margin", "order"), $key) {
+//     $utilities: map-merge($utilities, ($key: map-merge($util, (responsive: false))));
+//   }
+// }
+@import "bootstrap/scss/utilities/api";
+
+// Variables propias
+:root {
+  --color-bg-primary: #{$body-bg};
+  --color-bg-secondary: #{$body-secondary-bg};
+  --color-bg-tertiary: #{$body-tertiary-bg};
+
+  --color-txt-primary: #{$primary};
+  --color-txt-secondary: #{$secondary};
+  --color-txt-tertiary: #{$tertiary};
+
+  --color-accent: #{$accent};
+  --color-selection: #{$selection};
+
+  --fs-body: 1.0rem; //24px
+  --fs-title: 2.0rem; // 36px
+  --fs-subtitle: 1.5rem; // 32px
+  --fs-label: 0.8rem; // 16px
+
+  --transition-speed: 0.3s;
+}
+
+// estilos más generales
+html,
+body,
+main {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+}
+
+section {
+  scroll-margin-top: 20px;
+}
+
+
+// Colores de fondo
+.bg-tertiary {
+  background-color: $body-tertiary-bg !important;
+}
+
+// Colores de texto
+.text-tertiary {
+  color: $tertiary !important;
+}
+
+.text-accent {
+  color: $accent !important;
+}
+
+
+// Tamaños de texto
+.fs-title {
+  font-size: #{$h1-font-size} !important;
+}
+
+.fs-subtitle {
+  font-size: #{$h3-font-size} !important;
+}
+
+.fs-body {
+  font-size: #{$font-size-base} !important;
+}
+
+.fs-label {
+  font-size: #{$extra-font-size} !important;
+}
+
+// Un ancho específico, acorde al modo bootstrap
+.w-90 {
+  width: 90% !important;
+}
+
+// Sombra para textos
+.text-shadow {
+  text-shadow:
+      -1px 0px 0 var(--color-shadow),
+      1px 0px 0 var(--color-shadow),
+      0px 1px 0 var(--color-shadow),
+      0px -1px 0 var(--color-shadow),
+      -1.2px 1.2px 0 var(--color-shadow),
+      1.2px 1.2px 0 var(--color-shadow),
+      -1.2px -1.2px 0 var(--color-shadow),
+      1.2px -1.2px 0 var(--color-shadow);
+     /* -webkit-text-stroke: 1px black; */
+}
+
+p {
+  font-family: "Pangolin", cursive;
+}
+
+body {
+  font-synthesis: none;
+}
+
+b {
+  font-weight: 400;
+}

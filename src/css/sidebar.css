@@ -1,0 +1,135 @@
+/* ========================================
+   VARIABLES
+======================================== */
+:root {
+  --button-size: 100px;
+  --sidebar-expanded-width: 200px;
+}
+
+#sidebar {
+  /* Con menú cerrado */
+  width: var(--button-size);
+  height: var(--button-size);
+  /* background-color: var(--color-bg-primary); */
+  color: var(--color-txt-primary);
+  z-index: 1000;
+  transition: width var(--transition-speed) ease;
+  mix-blend-mode: difference;
+
+  .link {
+    color: var(--color-txt-primary);
+    text-decoration: none;
+    font-size: var(--fs-subtitle);
+    padding: 12px;
+    white-space: nowrap;
+  }
+
+  .link:hover {
+    color: var(--color-txt-tertiary);
+    padding-left: calc(var(--button-size)/3);
+    transition: padding-left var(--transition-speed) ease;
+  }
+
+  .toggle {
+    width: var(--button-size);
+    height: var(--button-size);
+    border: none;
+    background: transparent;
+    gap: 7px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    span {
+      width: 32px;
+      height: 3px;
+      background-color: var(--color-txt-primary);
+      transition: all var(--transition-speed) ease;
+    }
+  }
+
+  /* Ocultar links */
+  .menu {
+    visibility: hidden;
+    transition: opacity var(--transition-speed) ease;
+    width: fit-content;
+  }
+
+  /* Con menú abierto */
+  &.active {
+    width: var(--sidebar-expanded-width);
+    height: 100vh;
+    mix-blend-mode: unset;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: max-content;
+
+    /* Animación de la hamburguesa a x */
+    .toggle {
+      span {
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-10px) rotate(-45deg);
+        }
+      }
+    }
+
+    /* Mostar links */
+    .menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+/* Configuración de las secciones acorde al menú desplegable */
+#sidebar {
+  &~ main {
+    section {
+      &:first-child {
+        margin-top: var(--button-size);
+      }
+
+      &> *:first-child {
+        transition: transform var(--transition-speed) ease;
+        overflow: hidden;
+        margin: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-speed) ease;
+      pointer-events: none;
+      z-index: 900;
+    }
+  }
+
+  /* Oscurecimiento del contenido */
+  &.active ~ main {
+    section > *:first-child {
+      transform: translateX(calc(var(--sidebar-expanded-width) - var(--button-size)));
+      transition: transform var(--transition-speed) ease;
+      pointer-events: none;
+    }
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

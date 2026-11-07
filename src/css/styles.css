@@ -1,0 +1,9 @@
+/* Hoja de estilos general con todos, para solo cargar una */
+@import url("main.css");
+@import url("loader.css");
+@import url("components.css");
+@import url("sidebar.css");
+@import url("about.css");
+@import url("stack.css");
+@import url("projects.css");
+@import url("footer.css");

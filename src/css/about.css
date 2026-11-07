@@ -1,0 +1,87 @@
+#about-me {
+  /* Alto toda la pantalla, a menos que sea una pantalla muy larga */
+  --about-height: min(100dvh, 650px);
+  min-height: var(--about-height);
+  display: flex;
+  padding: 0 calc(var(--button-size)/2) 0 var(--button-size);
+
+  .about {
+    flex: 1;
+    display: grid;
+    /* izquierda flexible, derecha = ancho de la imagen */
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 0fr auto auto 0fr;
+    grid-template-areas:
+      ".       img"
+      "header  img"
+      "text    img"
+      "buttons img"
+      ".       img";
+    column-gap: 1rem;
+    row-gap: 3rem;
+    padding: 0 2rem;
+    text-align: right;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  span {
+    --color-shadow: var(--color-accent);
+  }
+
+  .text {
+    grid-area: text;
+  }
+
+  .profile {
+    grid-area: img;
+    /* toca el borde superior e inferior de la sección */
+    height: var(--about-height);
+    /* relación de aspecto */
+    object-fit: contain;
+    align-self: end;
+  }
+
+  .buttons {
+    grid-area: buttons;
+  }
+
+  @media (max-width: 999px) {
+    padding: 0 calc(var(--button-size)/2);
+
+    /* Centrar todo */
+    .about {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: none;
+      grid-template-areas:
+        "header"
+        "img"
+        "text"
+        "buttons";
+      justify-items: center;
+      align-content: center;
+      gap: 1rem;
+      text-align: center;
+      padding-bottom: calc(2/3*var(--button-size));
+    }
+
+    .profile {
+      /* relación de aspecto */
+      height: auto;
+      max-height: 650px;
+      max-width: 100%;
+      object-fit: fill;
+      align-self: auto;
+    }
+
+    .buttons {
+      grid-area: buttons;
+    }
+  }
+
+  @media (max-width: 999px) {
+    padding: 1rem 0;
+  }
+}

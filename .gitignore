@@ -1,3 +1,6 @@
+.gitignore
+THIRD-PARTY-NOTICES.MD
+
 # Logs
 logs
 *.log
@@ -7,6 +10,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+.wrangler/
 node_modules
 dist
 dist-ssr

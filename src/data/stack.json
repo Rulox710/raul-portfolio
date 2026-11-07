@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Java",
+    "svg": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "alt": "Java",
+    "id": "java"
+  },
+  {
+    "name": "JS",
+    "svg": "/images/third-party/stack-javascript.svg",
+    "alt": "JavaScript",
+    "id": "js"
+  },
+  {
+    "name": "Python",
+    "svg": "/images/third-party/stack-python.svg",
+    "alt": "Python",
+    "id": "python"
+  },
+  {
+    "name": "HTML",
+    "svg": "/images/third-party/stack-html5.svg",
+    "alt": "HTML5",
+    "id": "html"
+  },
+  {
+    "name": "CSS",
+    "svg": "/images/third-party/stack-css.svg",
+    "alt": "CSS3",
+    "id": "css"
+  },
+  {
+    "name": "SQL",
+    "svg": "/images/third-party/stack-database.svg",
+    "alt": "sql",
+    "id": "sql"
+  },
+  {
+    "name": "Git",
+    "svg": "/images/third-party/stack-git.svg",
+    "alt": "Git",
+    "id": "git"
+  },
+  {
+    "name": "GML",
+    "svg": "/images/third-party/stack-gamemaker.svg",
+    "alt": "GameMaker Language",
+    "id": "gml"
+  },
+  {
+    "name": "LaTeX",
+    "svg": "/images/third-party/stack-latex.svg",
+    "alt": "LaTeX",
+    "id": "latex"
+  }
+]

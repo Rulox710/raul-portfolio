@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raúl | Desarrollador Full Stack</title>
+
+  <meta
+    name="description" content="Portfolio de Raúl, desarrollador Full Stack especializado en Java, desarrollo web y aplicaciones modernas."
+  >
+  <meta
+    name="keywords" content="raul,portafolio,desarrollador,java,full stack,licenciado"
+  >
+
+  <meta property="og:title" content="Raúl | Desarrollador Full Stack" >
+  <meta property="og:description" content="Portfolio de Raúl, desarrollador Full Stack especializado en Java y desarrollo web.">
+  <meta property="og:image" content="https://rauls-portfolio.pages.dev/og/preview.png" >
+  <meta property="og:image:alt" content="Portfolio de Raúl, desarrollador Full Stack">
+  <meta property="og:url" content="https://rauls-portfolio.pages.dev/" >
+  <meta property="og:site_name" content="Portafolio de Raúl" >
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:type" content="website" >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raúl | Desarrollador Full Stack">
+  <meta name="twitter:description" content="Portfolio de Raúl, desarrollador Full Stack especializado en Java y desarrollo web.">
+  <meta name="twitter:image" content="https://rauls-portfolio.pages.dev/og/preview.png" >
+
+  <meta name="robots" content="index, follow" >
+
+  <link rel="canonical" href="https://rauls-portfolio.pages.dev/" >
+
+  <script type="module" src="./main.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+  <div id="loader" class="d-flex flex-row align-items-center justify-content-center gap-2 overflow-hidden">
+    <div>C</div>
+    <div>A</div>
+    <div>R</div>
+    <div>G</div>
+    <div>A</div>
+    <div>N</div>
+    <div>D</div>
+    <div>O</div>
+  </div>
+
+  <div id="portfolio" style="display:none;">
+
+    <aside id="sidebar" class="position-fixed top-0 left-0">
+      <button id="menuToggle"
+          class="toggle p-0 d-flex flex-column justify-content-center align-items-center"
+          aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebarMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu gap-3 p-3 d-flex flex-column" id="sidebarMenu">
+        <a href="#about-me" class="link">Sobre mí</a>
+        <a href="#stack" class="link">Stack Tecnológico</a>
+        <a href="#projects" class="link">Proyectos</a>
+      </nav>
+    </aside>
+
+    <main>
+
+      <section id="about-me">
+        <div class="about">
+          <h1 class="header m-0">
+            Hola, soy<br>
+            <span class="text-tertiary text-shadow">Raúl Nuño Valdés</span>
+          </h1>
+
+          <img class="profile" src="/images/perfil.webp" alt="Mi fotografía"/>
+
+          <p class="text m-0">
+            Licenciado en Ciencias de la Computación.<br>
+            Desarrollador <span class="text-tertiary text-shadow">Full Stack Java</span>
+            interesado en construir aplicaciones web,
+            desarrollar soluciones de software y diseñar interfaces intuitivas.
+          </p>
+
+          <div class="buttons d-flex flex-wrap justify-content-center gap-3">
+            <a href="mailto:raulnuno.cs+trabajo@proton.me"
+                class="btn-florence" type="button"
+                aria-label="Enlace para enviar correo" title="Enviar Correo">
+              <img src="/images/third-party/mail.svg" alt="Correo electrónico"
+                class="img-fluid" />
+            </a>
+            <a href="https://www.linkedin.com/in/raul-nuno-valdes"
+                target="_blank" rel="noopener noreferrer"
+                class="btn-florence" type="button"
+                aria-label="Enlace para ir a LinkedIn" title="Ir a LinkedIn">
+              <img src="/images/third-party/brand-linkedin.svg" alt="LinkedIn"
+                class="img-fluid" />
+            </a>
+            <a href="https://github.com/Rulox710"
+                target="_blank" rel="noopener noreferrer"
+                class="btn-florence" type="button"
+                aria-label="Enlace para ir a GitHub" title="Ir a GitHub">
+              <img src="/images/third-party/brand-github.svg" alt="GitHub"
+                class="img-fluid" />
+            </a>
+            <a href="https://gitlab.com/rnunovaldes"
+                target="_blank" rel="noopener noreferrer"
+                class="btn-florence" type="button"
+                aria-label="Enlace para ir a GitLab" title="Ir a GitLab">
+              <img src="/images/third-party/brand-gitlab.svg" alt="Enlace a GitLab"
+                class="img-fluid" />
+            </a>
+            <a href="/files/curriculum.pdf"
+                download="CV_Raul-Nuno-Valdes.pdf"
+                class="btn-florence" type="button"
+                aria-label="Enlace para descargar CV" title="Descargar CV">
+              <img src="/images/third-party/file-cv.svg" alt="Curriculum"
+                class="img-fluid" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="bg-body-secondary justify-content-center">
+        <div>
+          <h2 class="text-secondary text-center m-3">Mi stack Tecnológico</h2>
+
+          <div class="d-flex flex-wrap justify-content-center gap-3"> </div>
+
+        </div>
+      </section>
+
+      <section id="projects" class="bg-body-secondary d-flex justify-content-center">
+        <div class="box bg-tertiary py-3 px-4">
+          <h2 class="container-sm text-center text-tertiary text-shadow p-0 mb-3">
+            Proyectos
+          </h2>
+
+          <div class="row gap-3 justify-content-center"> </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer id="mainFooter" class="my-3">
+      <div class="d-flex flex-column align-items-center">
+        <div class="container-fluid">
+          <a class="d-flex justify-content-end text-tertiary" href="#top">
+            ↑ Volver arriba
+          </a>
+          <p class="d-flex justify-content-center mt-2 mb-0 text-accent">
+            Este portafilio está inspirado en Florence (Mountains, 2018)
+          </p>
+        </div>
+        <hr class="w-90 text-tertiary opacity-75"/>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <div id="copyleft"> </div> 2026 · Raúl Nuño
+        </div>
+
+        <p id="disclaimer" class="text-accent text-center">
+          Contenido bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"
+          rel="license noopener" target="_blank">CC BY-SA 4.0</a> (excepto foto y CV) ·
+          Código bajo <a href="https://github.com/Rulox710/raul-portfolio/blob/main/LICENSE"
+          target="_blank" rel="noopener noreferrer">MIT</a>
+          <br>
+          Los logos y marcas pertenecen a sus respectivos dueños y se usan solo para identificarlos.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
