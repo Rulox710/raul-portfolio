@@ -6,7 +6,7 @@ import STACK from '../data/stack.json';
  * como botones interactuables.
  */
 function inyectStack() {
-  const STACK_SPACE = document.querySelector('#stack .d-flex');
+  const STACK_SPACE = document.querySelector('#stackFilter');
   for (const TECH of STACK) {
     STACK_SPACE.innerHTML +=
       `<button class="btn-florence px-3" type="button" data-tech="${TECH.id}">
@@ -130,7 +130,7 @@ function showPortfolio() {
     setTimeout(() => {
       document.getElementById('portfolio').classList.add('fade-in');
     }, 600);
-  }, 2000);
+  }, 1600);
 }
 
 inyectStack();

@@ -1,6 +1,77 @@
 /* Selectores para elementos más genéricos */
 
-/* Bot''on con estilo florence */
+@keyframes subir {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-25dvh);
+  }
+}
+
+@keyframes subir-menos {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10dvh);
+  }
+}
+
+@keyframes desvanecer {
+  0% {
+    opacity: 0.3;
+  }
+
+  10% {
+    opacity: 0.90;
+  }
+
+  50% {
+    opacity: 0.80;
+  }
+
+  80% {
+    opacity: 0.50;
+  }
+
+  85% {
+    opacity: 0.30;
+  }
+
+  90% {
+    opacity: 0.05;
+  }
+
+  100% {
+    opacity: 0.0;
+  }
+}
+
+.bolita {
+  position: fixed;
+  right: 4rem;
+  bottom: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0;
+  z-index: 1030;
+  pointer-events: none;
+  visibility: visible;
+}
+
+.bolita.visible {
+  visibility: visible;
+  animation:
+    subir 2s ease-out forwards infinite,
+    desvanecer 2s linear forwards infinite;
+}
+
+/* Botón con estilo florence */
 .btn-florence {
   flex-shrink: 0;
   /* Tamaño configurable */
@@ -46,13 +117,14 @@
       border-color var(--transition-speed) ease,
       border-width var(--transition-speed) ease-in;
 
-    img, p {
+    img,
+    p {
       filter: invert(84%) sepia(24%) saturate(3737%) hue-rotate(8deg) brightness(110%) contrast(96%);
       /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(146deg) brightness(109%) contrast(103%); */
     }
 
     /* Pasar el cursos sobre botón "activo" */
-    :hover {
+    &:hover {
       border-width: 8px 5px;
       transition: border-width var(--transition-speed) ease-in;
     }
@@ -108,5 +180,18 @@
       background: #FA5C5C;
       transition-duration: 0s;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bolita.visible {
+    animation:
+      subir-menos 2s ease-out 1,
+      desvanecer 2s linear 1;
+    animation-fill-mode: forwards;
+  }
+
+  .btn-florence:active {
+    transform: scale(0.98);
   }
 }

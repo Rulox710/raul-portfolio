@@ -72,6 +72,16 @@ $extra-font-size: 0.8rem;
   --transition-speed: 0.3s;
 }
 
+// Ocultar scroll
+/* Chrome, Edge, Safari y otros navegadores WebKit */
+// body::-webkit-scrollbar {
+//   display: none;
+// }
+/* Firefox */
+// html {
+//   scrollbar-width: none;
+// }
+
 // estilos más generales
 html,
 body,
