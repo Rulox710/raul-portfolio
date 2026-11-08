@@ -25,6 +25,7 @@
   div {
     font-weight: bolder;
     animation: wave 1.2s ease-in-out infinite;
+    --color-shadow: var(--color-bg-tertiary);
 
     &:nth-child(1) {
       animation-delay: 0s;
