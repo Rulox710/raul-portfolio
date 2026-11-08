@@ -24,34 +24,32 @@ function inyectProjects() {
   const PROJECTS_SPACE = document.querySelector('#projects .row');
 
   for (const PROJECT of PROJECTS) {
-    let source = (PROJECT.image) ? `<img src="${PROJECT.image}" alt="${PROJECT.alt}" class="img-thumbnail" loading="lazy">` :
-      `<video class="img-thumbnail" controls controlslist="nofullscreen noremoteplayback nodownload" muted loading="lazy" autoplay disablepictureinpicture playsinline preload="metadata">
-        <source src="${PROJECT.video}" type="video/mp4">
-        Tu navegador no soporta vídeo.
-      </video>`;
+    let source = (PROJECT.image) ?
+      `<img src="${PROJECT.image}" alt="${PROJECT.alt}" class="img-fluid p-2" loading="lazy">` :
+      `<video class="img-fluid p-2" controls controlslist="nofullscreen noremoteplayback nodownload" muted loading="lazy" autoplay disablepictureinpicture playsinline preload="metadata">
+      <source src="${PROJECT.video}" type="video/mp4">
+      Tu navegador no soporta vídeo.
+    </video>`;
 
     PROJECTS_SPACE.innerHTML +=
-      `<article class="project card col-11 col-lg-5" data-techs="${PROJECT.techs}">
-        <div class="d-flex flex-column justify-content-start card-body">
-          <div class="d-flex justify-content-between align-items-center gap-3 m-3">
-            <h3 class="card-title text-secondary fs-subtitle m-0">
+      `<article class="project card h-100 col-11 col-lg-5" data-techs="${PROJECT.techs}">
+        <div class="card-body d-flex flex-column gap-3 mt-2">
+
+          <div class="d-flex justify-content-center align-items-center gap-3">
+            <h3 class="card-title align-content-center text-secondary fs-subtitle m-0" title="${PROJECT.title}">
               ${PROJECT.title}
             </h3>
-            <div id="${PROJECT.id}" class="d-flex justify-content-center gap-3"> </div>
+            <div id="${PROJECT.id}" class="d-flex gap-3 flex-shrink-0"></div>
           </div>
 
-          <div class="row align-items-center h-100">
-            <div class="col-12 col-lg-4 order-2 order-lg-1 align-self-start p-0">
-              <p class="card-text">
-                ${PROJECT.description}
-              </p>
-
-            </div>
-
-            <div class="d-flex justify-content-center col-12 col-lg-8 order-1 order-lg-2 mb-3 mb-lg-0">
-              ${source}
-            </div>
+          <div class="ratio ratio-4x3 bg-black rounded overflow-hidden">
+            ${source}
           </div>
+
+          <p class="card-text fs-body text-center">
+            ${PROJECT.description}
+          </p>
+
         </div>
       </article>`;
 

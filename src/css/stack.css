@@ -1,3 +1,15 @@
+@keyframes tiltBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5) rotate(-7deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(0deg);
+  }
+}
+
 #stack {
   /* Alto toda la pantalla, a menos que sea una pantalla muy larga */
   min-height: var(--about-height);
@@ -6,6 +18,11 @@
 
   h2 {
     font-size: var(--fs-title);
+  }
+
+  div > p {
+    --color-shadow: var(--color-bg-primary);
+    animation: tiltBounce 1.2s linear infinite alternate;
   }
 
   @media (max-width: 999px) {

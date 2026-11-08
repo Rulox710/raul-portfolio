@@ -16,11 +16,11 @@ $selection: #28a745;
 $body-color: $primary;
 $headings-color: $primary;
 
-$font-size-base: 1.5rem; //24px
-$h1-font-size: 2.25rem; // 36px
-$h2-font-size: 2.25rem; // 32px
-$h3-font-size: 2rem; // 32px
-$extra-font-size: 1rem; // 16px
+$font-size-base: 1.2rem;
+$h1-font-size: 2.6rem;
+$h2-font-size: 2.6rem;
+$h3-font-size: 2rem;
+$extra-font-size: 0.8rem;
 
 @import "@fontsource/pangolin";
 // Configuración
@@ -36,6 +36,7 @@ $extra-font-size: 1rem; // 16px
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/images";
+@import "bootstrap/scss/helpers/ratio";
 
 // solo las utilidades que uso
 // $utilities: map-get-multiple($utilities, (
@@ -63,10 +64,10 @@ $extra-font-size: 1rem; // 16px
   --color-accent: #{$accent};
   --color-selection: #{$selection};
 
-  --fs-body: 1.0rem; //24px
-  --fs-title: 2.0rem; // 36px
-  --fs-subtitle: 1.5rem; // 32px
-  --fs-label: 0.8rem; // 16px
+  --fs-body: #{$font-size-base};
+  --fs-title: #{$h1-font-size};
+  --fs-subtitle: #{$h3-font-size};
+  --fs-label: #{$extra-font-size};
 
   --transition-speed: 0.3s;
 }

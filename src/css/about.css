@@ -48,6 +48,19 @@
     grid-area: buttons;
   }
 
+  @media (max-width: 1205px) {
+    .about {
+      grid-template-areas:
+        ".       img"
+        "header  img"
+        "text    img"
+        ".       img"
+        "buttons buttons"
+        ".       .";
+      padding-bottom: 1rem;
+    }
+  }
+
   @media (max-width: 999px) {
     padding: 0 calc(var(--button-size)/2);
 
