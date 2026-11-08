@@ -6608,6 +6608,8 @@ progress {
   --transition-speed: 0.3s;
 }
 
+/* Chrome, Edge, Safari y otros navegadores WebKit */
+/* Firefox */
 html,
 body,
 main {

@@ -1,8 +1,11 @@
 @keyframes wave {
-  0%, 40%, 100% {
+  0%,
+  40%,
+  100% {
     transform: translateY(0) scale(1);
     opacity: .7;
   }
+
   20% {
     transform: translateY(-15px) scale(1.2);
     opacity: 1;
@@ -69,5 +72,19 @@
   &.fade-in {
     opacity: 1;
     pointer-events: all;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  #loader div {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  #loader,
+  #portfolio {
+    /* transition: none; */
   }
 }
