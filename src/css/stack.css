@@ -4,15 +4,15 @@
   }
 
   25% {
-    transform: scale(1.15) rotate(-9deg);
+    transform: scale(1.05) rotate(-9deg);
   }
 
   50% {
-    transform: scale(1.3) rotate(-12deg);
+    transform: scale(1.15) rotate(-12deg);
   }
 
   75% {
-    transform: scale(1.15) rotate(-9deg);
+    transform: scale(1.05) rotate(-9deg);
   }
 
   100% {
@@ -35,21 +35,27 @@
     --color-shadow: var(--color-bg-primary);
     animation: tiltBounce 1.2s linear infinite;
     width: fit-content;
-    top: -70px;
-    left: -190px;
+    /* top: -70px;
+    left: -190px; */
+    left: 0px;
+    top: -10px;
     transform: rotate(-7deg);
+  }
+
+  .link:hover {
+    color: var(--color-txt-tertiary)
   }
 
   @media (max-width: 520px) {
     div>p {
-      left: 0px;
-      top: -80px;
+      /* left: 0px;
+      top: -10px; */
     }
   }
   @media (max-width: 425px) {
     div>p {
       left: 0px;
-      top: -130px;
+      top: -5px;
     }
   }
   @media (max-width: 999px) {

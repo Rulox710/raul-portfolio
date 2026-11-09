@@ -56,16 +56,15 @@
   bottom: 2rem;
   width: 50px;
   height: 50px;
+  border: 2px, solid, var(--color-bg-primary);
   border-radius: 50%;
   background: var(--color-accent);
   opacity: 0;
   z-index: 1030;
   pointer-events: none;
-  visibility: visible;
 }
 
 .bolita.visible {
-  visibility: visible;
   animation:
     subir 2s ease-out forwards infinite,
     desvanecer 2s linear forwards infinite;
@@ -180,6 +179,12 @@
       background: #FA5C5C;
       transition-duration: 0s;
     }
+  }
+}
+
+@media (max-width: 999px) {
+  .bolita{
+    left: 2rem;
   }
 }
 

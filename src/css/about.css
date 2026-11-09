@@ -62,7 +62,7 @@
   }
 
   @media (max-width: 999px) {
-    padding: 0 calc(var(--button-size)/2);
+    padding: 1rem 0;
 
     /* Centrar todo */
     .about {
@@ -92,9 +92,5 @@
     .buttons {
       grid-area: buttons;
     }
-  }
-
-  @media (max-width: 999px) {
-    padding: 1rem 0;
   }
 }

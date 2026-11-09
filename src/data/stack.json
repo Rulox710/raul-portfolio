@@ -1,7 +1,7 @@
 [
   {
     "name": "Java",
-    "svg": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "svg": "/images/third-party/stack-java.svg",
     "alt": "Java",
     "id": "java"
   },

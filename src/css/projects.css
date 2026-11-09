@@ -58,6 +58,17 @@
         text-wrap: balance;
       }
 
+      &.col-11 {
+        .card-title {
+          word-wrap: break-word;
+        }
+        .card-title, .card-text {
+          -webkit-line-clamp: none;
+          line-clamp: none;
+          min-height: calc(1 * 1.5em);
+        }
+      }
+
       .card-body {
         height: -webkit-fill-available;
       }

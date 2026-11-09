@@ -1,3 +1,5 @@
+import { reiniciar } from './idle';
+
 import PROJECTS from '../data/projects.json';
 import STACK from '../data/stack.json';
 
@@ -35,11 +37,11 @@ function inyectProjects() {
       `<article class="project card h-100 col-11 col-lg-5" data-techs="${PROJECT.techs}">
         <div class="card-body d-flex flex-column gap-3 mt-2">
 
-          <div class="d-flex justify-content-center align-items-center gap-3">
+          <div class="d-flex justify-content-around justify-content-sm-center align-items-center gap-3">
             <h3 class="card-title align-content-center text-secondary fs-subtitle m-0" title="${PROJECT.title}">
               ${PROJECT.title}
             </h3>
-            <div id="${PROJECT.id}" class="d-flex gap-3 flex-shrink-0"></div>
+            <div id="${PROJECT.id}" class="d-flex gap-3 flex-shrink-0 flex-column flex-sm-row"></div>
           </div>
 
           <div class="ratio ratio-4x3 bg-black rounded overflow-hidden">
@@ -129,6 +131,7 @@ function showPortfolio() {
     document.getElementById('portfolio').style.display = 'block';
     setTimeout(() => {
       document.getElementById('portfolio').classList.add('fade-in');
+      reiniciar();
     }, 600);
   }, 1600);
 }
@@ -137,4 +140,4 @@ inyectStack();
 inyectProjects();
 linkProyects();
 
-showPortfolio();
+// showPortfolio();
