@@ -1,5 +1,6 @@
 .gitignore
 THIRD-PARTY-NOTICES.MD
+src/css/main.css
 
 # Logs
 logs
