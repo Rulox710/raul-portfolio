@@ -1,4 +1,4 @@
-const IDLE_MS = 1000;
+const IDLE_MS = 10000;
 const BOLITA = document.getElementById('bolita');
 let temporizador;
 

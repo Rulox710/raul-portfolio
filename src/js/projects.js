@@ -140,4 +140,4 @@ inyectStack();
 inyectProjects();
 linkProyects();
 
-// showPortfolio();
+showPortfolio();
